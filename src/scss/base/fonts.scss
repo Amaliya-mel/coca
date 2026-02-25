@@ -1,0 +1,6 @@
+@use "../mixins/font-face" as *;
+
+@include font-face(inter, "Inter_18ptRegular", 400);
+@include font-face(inter, "Inter_18ptMedium", 500);
+@include font-face(inter, "Inter_18ptSemiBold", 600);
+@include font-face(inter, "Inter_18ptBold", 700);
