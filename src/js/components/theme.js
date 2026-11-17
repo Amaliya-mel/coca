@@ -4,14 +4,12 @@ export const useTheme = () => {
 
   const themeTargetDataset = themeTarget.dataset;
 
-  const theme = localStorage.getItem('theme') || 'light';
+  const theme = localStorage.getItem('theme') || 'dark';
   themeTargetDataset.theme = theme;
 
-  if (theme === 'dark') {
-    themeSwitcher.checked = true;
-  }
+  themeSwitcher.checked = theme === 'dark';
 
-  themeSwitcher.addEventListener('click', () => {
+  themeSwitcher.addEventListener('change', () => {
     if (themeTargetDataset.theme === 'light') {
       themeTargetDataset.theme = 'dark';
       localStorage.setItem('theme', 'dark');
